@@ -62,7 +62,7 @@ export class Parser {
 
         let text = activeEditor.document.getText();
         let uri = activeEditor.document.uri;
-        let regEx: RegExp = /(^|[ \t])(\/\*[^*])+([\s\S]*?)(\*\/)/gm;
+        let regEx: RegExp = /^[ \t]*(\/\*)([\s\S]*?)(\*\/)/gm;
         let match: any;
 
         while (match = regEx.exec(text)) {
